@@ -1,0 +1,45 @@
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5% 0;
+}
+
+.CornerUpLeft-container{
+    width: fit-content;
+    height: fit-content;
+}
+
+.CornerUpLeft-icon{
+    font-size: 30px;
+    color: #ffc83dc8;
+    cursor: pointer;
+    
+
+}
+.CornerUpLeft-icon:hover{
+    animation: moveLeft 1s infinite;
+    color: #ffc83dfa;
+}
+
+@keyframes moveLeft{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+/*צריך להיות בסוף הסיאסאס*/
+@media screen and (max-width: 768px){
+    .todo-title{
+        color: red;
+        text-align: center;
+        font-size: large;
+    }
+}
