@@ -21,7 +21,13 @@ export const Tasks = () => {
 
   }, [todo])
 
-
+const clearAll=()=>{
+  let text = "You really want to delete all?";
+  if (confirm(text)) {
+    setTodos([])
+    localStorage.removeItem('todos')
+  } 
+}
 
   const handleAddTodo = async() => {
     if (!todo) return
@@ -119,6 +125,18 @@ export const Tasks = () => {
             {todos.length+1}.{todo}
             </span>
             }
+        </div>
+        <div>
+        {todos.length ?         
+         <button
+         className='clear-all'
+         onClick={clearAll}
+         >
+            Clear All
+          </button>: null
+
+        }
+
         </div>
       </div>
     </div>

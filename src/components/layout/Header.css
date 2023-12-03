@@ -28,6 +28,11 @@
 
 @media (max-width:768px) {
     .links-wrapper{
-        gap:4rem;
+        gap:3.5rem;
+    }
+}
+@media (max-width:320px) {
+    .links-wrapper{
+        gap:1.8rem;
     }
 }
